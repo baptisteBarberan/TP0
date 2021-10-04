@@ -5,6 +5,7 @@
  */
 package calculator;
 
+import static java.time.Clock.system;
 import java.util.Scanner;
 
 /**
@@ -65,13 +66,15 @@ public class Calculator {
                 result = operande1%operande2;
                 System.out.print("le résultat est "+result);
                 break;
-                
-        
         }
+                
+        System.out.print("\n enregistré sur github (verif)")  ;
+                
+        
         
                 
-               
+         
                 
-       
     }
 }
+
