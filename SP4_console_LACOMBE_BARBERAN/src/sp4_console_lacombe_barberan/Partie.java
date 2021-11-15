@@ -27,8 +27,9 @@ public class Partie {
     public void attribuerCouleursAuxJoueurs() {
         // couleur Jaune attribué à 0
         // couleur Jaune attribué à 1 
-
-        if (Math.random() * (0 - 1) == 0) {
+        Random r = new Random();
+        int n = r.nextInt(1);
+        if (n == 0) {
             ListeJoueurs[0].Couleur = "Jaune";
             ListeJoueurs[1].Couleur = "Rouge";
         } else {
@@ -39,25 +40,27 @@ public class Partie {
     }
 
     public void initialiserPartie() {
-        //creation des jetons joueur1
+        Random r = new Random();
 
+//creation des jetons joueur1
         for (int i = 0; i <= 20; i++) {
-            Jeton jeton = new Jeton ;
-            jeton.Couleur = ListeJoueurs[0].Couleur;
+            Jeton jeton = new Jeton(ListeJoueurs[0].Couleur);
             ListeJoueurs[0].ajouterJeton(jeton);
 
         }
         //creation des jetons joueur1
-        for (int i = 0; i <= 20; i++) {
-            Jeton jeton = new Jeton ;
-            jeton.Couleur = ListeJoueurs[0].Couleur;
+        for (int j = 0; j <= 20; j++) {
+            Jeton jeton = new Jeton(ListeJoueurs[0].Couleur);
             ListeJoueurs[1].ajouterJeton(jeton);
 
-           }
+        }
         //placer les trous noir 
-        
-        
+        for (int k = 0; k < 5; k++) {
+
+            int a = r.nextInt(5);    //tirer aleatoirement un entier  
+            int b = r.nextInt(6);
+            grillejeu.placerTrouNoir(a, b);
+}
 
     }
-
 }
