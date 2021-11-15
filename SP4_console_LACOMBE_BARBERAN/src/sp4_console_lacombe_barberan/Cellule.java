@@ -22,7 +22,7 @@ public class Cellule {
 
     public boolean affecterJeton(Jeton Jeton) { // affecte le jeton en paramètre ou retourne faux si cellule pleine 
         if (jetonCourant == null) {
-            System.out.print("Cellule occupé ");
+            System.out.print("Cellule occupé");
             return false;
         } else {
             jetonCourant = Jeton;
@@ -44,7 +44,7 @@ public class Cellule {
 
     public boolean supprimerJeton() {
         if (jetonCourant == null) {
-            System.out.print("Jeton innexistant ");
+            System.out.print("Jeton innexistant");
             return false;
         } else {
             jetonCourant = null;
@@ -55,7 +55,7 @@ public class Cellule {
     public boolean placerTrouNoir() {
         if (trouNoir == false) {
             trouNoir = true;
-            System.out.println("Ajout de Trou Noir effectuÃ©");
+            System.out.println("Ajout de Trou Noir effectue");
             return true;
         } else {
             System.out.println("Trou Noir deja present");
@@ -66,7 +66,7 @@ public class Cellule {
     public boolean placerDesintegrateur(){
      if (desintegrateur == false) {
             desintegrateur = true;
-            System.out.println("Ajout du desintegrateur effectué");
+            System.out.println("Ajout du desintegrateur effectue");
             return true;
         } else {
             System.out.println("desintegrateur deja present");
@@ -77,7 +77,7 @@ public class Cellule {
 public boolean recupererDesintegrateur (){
  if (desintegrateur == true) {
             desintegrateur = false;
-            System.out.println("Suppression du desintegrateur effectué");
+            System.out.println("Suppression du desintegrateur effectue");
             return true;
         } else {
             System.out.println("pas de desintegrateur present");
