@@ -40,6 +40,9 @@ public class Partie {
     }
 
     public void initialiserPartie() {
+        
+        //Grille gillejeu =new Grille ;
+       // Grille[][] grillejeu = new  Grille[6][7];
         Random r = new Random();
 
 //creation des jetons joueur1
@@ -61,6 +64,23 @@ public class Partie {
             int b = r.nextInt(6);
             grillejeu.placerTrouNoir(a, b);
 }
-
+        //placer les desintegrateurs 
+        for (int c=0;c<2;c++){
+            int x = r.nextInt(5);    //tirer aleatoirement un entier  
+            int y = r.nextInt(6);
+            if (grillejeu.CellulesJeu[x][y].trouNoir==true){
+                grillejeu.placerDesintegrateur(x, y);
+            }
+            
+        }
+        for (int z=0;z<3;z++){
+            int x = r.nextInt(5);    //tirer aleatoirement un entier  
+            int y = r.nextInt(6);
+            grillejeu.placerDesintegrateur(x, y);
+            
+    }
+}
+    public void  debuterPartie(){
+        
     }
 }
